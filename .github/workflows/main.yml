@@ -20,6 +20,9 @@ jobs:
         with:
           version: 9
 
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
       - name: Build & Deploy Worker
         uses: cloudflare/wrangler-action@v3
         with:
